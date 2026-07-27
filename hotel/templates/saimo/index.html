@@ -1,0 +1,1234 @@
+ {% load static %}
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>
+     {% block current_page %}{% endblock current_page %}saimo hotel
+  </title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+
+
+<link href="{% static 'saimo/img/logo.png' %}" rel="icon">
+<link href="{% static 'saimo/img/logo.png' %}" rel="apple-touch-icon">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+
+<!-- Vendor CSS Files -->
+<link href="{% static 'saimo/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'saimo/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+<link href="{% static 'saimo/vendor/aos/aos.css' %}" rel="stylesheet">
+<link href="{% static 'saimo/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+<link href="{% static 'saimo/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Main CSS File -->
+<link href="{% static 'saimo/css/main.css' %}" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+ 
+{% block body %} 
+{% block navigation %}
+
+
+
+<header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+        <!-- Logo -->
+        <a href="{% url 'home' %}" class="logo d-flex align-items-center">
+            <img src="{% static 'saimo/img/logo.png' %}" alt="saimo hotel Logo">
+            <h1 class="sitename">saimo Hotel</h1>
+        </a>
+
+        <!-- Navigation -->
+        <nav id="navmenu" class="navmenu">
+            <ul>
+
+                <li>
+                    <a href="{% url 'home' %}" class="active">Home</a>
+                </li>
+
+                <li>
+                    <a href="{% url 'home' %}#about">About</a>
+                </li>
+
+                <!-- Dropdown -->
+                <li class="dropdown">
+                    <a href="#">
+                        <span>Serivices</span>
+                        <i class="bi bi-chevron-down toggle-dropdown"></i>
+                    </a>
+
+                    <ul>
+                        <li><a href="{% url 'accommodation' %}">Accommodation</a></li>
+                        <li><a href="{% url 'dining' %}">Restaurant & Dining</a></li>
+                        <li><a href="{% url 'conference' %}">Conference Facilities</a></li>
+                         <li><a href="{% url 'bar' %}">Bar & Lounge</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="{% url 'gallery' %}">Gallery</a>
+                </li>
+
+               
+
+                <li>
+                    <a href="{% url 'contact' %}">Contact</a>
+                </li>
+
+            </ul>
+
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+    </div>
+</header>
+{% endblock navigation %}
+  <main class="main">
+    <!-- HOME Section -->
+     {% block home %}
+<section class="home-section">
+  <div id="carouselExampleCaptions" class="carousel slide home-carousel" data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+        class="active" aria-current="true" aria-label="Slide 1"></button>
+
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <img src="{% static 'saimo/img/s1.jpeg' %}" class="d-block w-100 home-img" alt="School Image">
+
+        <div class="carousel-caption home-caption">
+          <h1>Welcome to saimo hotel</h1>
+          <p>
+            Discover luxury accommodation, breathtaking views, and unforgettable hospitality in the heart of nature.
+          </p>
+          
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <img src="{% static 'saimo/img/s2.jpeg' %}" class="d-block w-100 home-img" alt="Students">
+
+        <div class="carousel-caption home-caption">
+          <h1>Luxury Accommodation</h1>
+          <p>
+             Relax in our elegant rooms and suites designed to provide exceptional comfort and a memorable stay.
+          </p>
+            </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <img src="{% static 'saimo/img/food.jpeg' %}" class="d-block w-100 home-img" alt="School Life">
+
+        <div class="carousel-caption home-caption">
+          <h1>Dining, Events & Recreation</h1>
+          <p>
+               Enjoy exquisite dining, exciting recreational activities, and elegant venues for conferences, weddings, and celebrations.
+          </p>
+         
+        </div>
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button"
+      data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button"
+      data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </div>
+</section>
+{% endblock home %}
+
+<!-- End HOME Section -->
+{% block hero %}
+    <!-- Hero Section -->
+    <section id="hero" class="hero section light-background">
+      <div class="container section-title" data-aos="fade-up">
+    <span class="subtitle">WELCOME TO saimo hotel </span>
+  </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        
+
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="hero-content">
+              <h1 data-aos="fade-up" data-aos-delay="200">Experience Luxury at saimo hotel</h1>
+              <p data-aos="fade-up" data-aos-delay="300"> Escape to a world of relaxation and elegance. saimo hotel offers
+            breathtaking views, luxurious accommodations, exceptional dining,
+            and unforgettable experiences designed to create lasting memories.</p>
+              <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
+                <a href="#about" class="btn-primary">Book Your Stay</a>
+                <a href="#https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn-secondary glightbox">
+                  <i class="bi bi-play-circle"></i>
+                  Explore hotel
+                </a>
+              </div>
+              <div class="hero-stats" data-aos="fade-up" data-aos-delay="500">
+                <div class="stat-item">
+                  <div class="stat-number">30+</div>
+                  <div class="stat-label">Luxury Rooms</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">5★</div>
+                  <div class="stat-label">Guest Experience</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">24/7</div>
+                  <div class="stat-label">Premium Service</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
+             <img src="{% static 'saimo/img/s1.jpeg' %}" 
+     alt="Business Success" 
+     class="img-fluid">
+              <div class="floating-card" data-aos="zoom-in" data-aos-delay="600">
+                <div class="card-icon">
+                  <i class="bi bi-graph-up-arrow"></i>
+                </div>
+                <div class="card-content">
+                  <h5>Guest Rating</h5>
+                  <div class="growth-percentage">★★★★★</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    <!-- /Hero Section -->
+     {% endblock hero %}
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">About US</span>
+        <!-- <h2>About saimo hotel</h2> -->
+        <p>Discover a destination where luxury, comfort, and nature come together to create unforgettable experiences for every guest.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+            <div class="content">
+              <h2>Your Perfect Escape for Relaxation and Adventure</h2>
+              <p> saimo hotel is a premier hospitality destination dedicated to providing exceptional accommodation, fine dining, and memorable leisure experiences.</p>
+
+              <p>Nestled in a serene environment, our hotel offers guests the perfect balance of comfort, elegance, and natural beauty. Whether you are visiting for a family vacation, romantic getaway, business retreat, or special event, we provide personalized services designed to exceed expectations.</p>
+
+              <p>From luxurious rooms and exquisite dining to recreational activities and breathtaking surroundings, every aspect of saimo hotel is crafted to ensure an unforgettable stay.</p>
+
+              <div class="stats-row">
+                <div class="stat-item">
+                  <div class="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"></div>
+                  <div class="stat-label">Years of Hospitality</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="850" data-purecounter-duration="1"></div>
+                  <div class="stat-label">Satisfied Guests</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="240" data-purecounter-duration="1"></div>
+                  <div class="stat-label">Luxury Rooms</div>
+                </div>
+              </div>
+
+              <div class="cta-section">
+                <a href="#" team="" class="btn-outline">Explore Our Rooms</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="image-wrapper">
+              <img src="{% static 'saimo/img/s2.jpeg' %}" 
+     alt="About us" 
+     class="img-fluid">
+              <div class="floating-card" data-aos="zoom-in" data-aos-delay="500">
+                <div class="card-content">
+                  <div class="icon">
+                    <i class="bi bi-award"></i>
+                  </div>
+                  <div class="text">
+                    <h4>Luxury Experience</h4>
+                    <p>Exceptional comfort, service, and hospitality for every guest.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">WHAT WE OFFER</span>
+        <!-- <h2>Experience Luxury & Comfort</h2> -->
+        <p>At saimo hotel, we offer world-class hospitality services designed to make your stay memorable. From luxurious accommodations and fine dining to wellness treatments and exciting recreational activities, every experience is crafted to provide relaxation, comfort, and adventure.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5">
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item h-100">
+              <div class="service-icon">
+                <i class="bi bi-graph-up-arrow"></i>
+              </div>
+              <h3>Luxury Accommodation</h3>
+              <p>Enjoy spacious and elegantly designed rooms, suites, and cottages equipped with modern amenities for a comfortable and relaxing stay.</p>
+              <a href="service-details.html" class="service-link">
+                Learn More <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item h-100">
+              <div class="service-icon">
+                <i class="bi bi-palette"></i>
+              </div>
+              <h3>Fine Dining</h3>
+              <p> Savor delicious local and international cuisines prepared by expert chefs in a warm and inviting dining environment.</p>
+              <a href="service-details.html" class="service-link">
+                Learn More <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div><!-- End Service Item -->
+
+          
+
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item h-100">
+              <div class="service-icon">
+                <i class="bi bi-people"></i>
+              </div>
+              <h3>Events & Conferences</h3>
+              <p>Host weddings, corporate meetings, conferences, and special celebrations in our modern and fully equipped event spaces.</p>
+              <a href="service-details.html" class="service-link">
+                Learn More <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item h-100">
+              <div class="service-icon">
+                <i class="bi bi-bar-chart"></i>
+              </div>
+              <h3>Guest Services</h3>
+              <p>Enjoy exceptional hospitality with our 24-hour reception, concierge assistance, free Wi-Fi, secure parking, airport transfers, room service, housekeeping, and personalized support to ensure a comfortable and memorable stay.</p>
+              <a href="service-details.html" class="service-link">
+                Learn More <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="why-us section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">Why Choose saimo hotel</span>
+        <!-- <h2>Why Choose Us</h2> -->
+        <p>Experience the perfect blend of luxury, comfort, and exceptional hospitality. From elegant accommodation and delicious dining to exciting recreational activities and modern event facilities, saimo hotel is dedicated to creating unforgettable moments for every guest</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+             <div class="content">
+    <!-- <h2>Why Choose saimo hotel</h2> -->
+
+    <p>At saimo hotel, we are committed to providing exceptional hospitality in a serene and welcoming environment. Every guest is treated with personalized care to ensure a comfortable and memorable stay.</p>
+
+    <p>Our luxurious accommodation, delicious dining options, and modern amenities are designed to meet the needs of families, couples, business travelers, and groups seeking both relaxation and adventure.</p>
+
+    <p>Whether you're planning a holiday, a romantic getaway, a corporate retreat, or a special celebration, our professional team is dedicated to making every moment unforgettable with outstanding service and attention to detail.</p>
+
+    <p>Surrounded by beautiful natural scenery and offering a variety of recreational activities, conference facilities, and event spaces, saimo hotel is the perfect destination to relax, reconnect, and create lasting memories.</p>
+  </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="image-wrapper">
+             <img src="{% static 'saimo/img/s1.jpeg' %}" 
+     alt="Professional team collaboration" 
+     class="img-fluid">
+            </div>
+          </div>
+        </div>
+<!-- 
+        <div class="features-grid" data-aos="fade-up" data-aos-delay="400">
+          <div class="row g-5">
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="feature-item">
+                <div class="icon-wrapper">
+                  <i class="bi bi-lightbulb"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Innovation Leadership</h3>
+                  <p>We stay ahead of industry trends, implementing cutting-edge technologies and methodologies that drive transformational results for your business growth.</p>
+                </div>
+              </div>
+            </div><!-- End Feature Item -->
+<!-- 
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="feature-item">
+                <div class="icon-wrapper">
+                  <i class="bi bi-award"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Proven Expertise</h3>
+                  <p>Our team brings decades of combined experience across multiple industries, ensuring strategic insights and tactical execution that delivers measurable outcomes.</p>
+                </div>
+              </div>
+            </div> -->
+            <!-- End Feature Item -->
+
+            <!-- <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="feature-item">
+                <div class="icon-wrapper">
+                  <i class="bi bi-headset"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>24/7 Dedicated Support</h3>
+                  <p>Round-the-clock availability with personalized attention from dedicated account managers who understand your unique challenges and objectives.</p>
+                </div>
+              </div> -->
+            </div><!-- End Feature Item -->
+
+            <!-- <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="feature-item">
+                <div class="icon-wrapper">
+                  <i class="bi bi-graph-up-arrow"></i>
+                </div>
+                <div class="feature-content">
+                  <h3>Cost Efficiency</h3>
+                  <p>Streamlined processes and intelligent resource allocation reduce overhead while maximizing ROI, delivering premium results within your budget parameters.</p>
+                </div>
+              </div> -->
+            <!-- </div>End Feature Item --> 
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    <!-- /Why Us Section -->
+
+    <!-- SERVICES Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">OUR SERVICES</span>
+                <p>Indulge in a delightful dining experience at saimo hotel. Our restaurant
+      offers freshly prepared local and international cuisine, refreshing drinks,
+      private dining, and exceptional hospitality to make every meal unforgettable.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
+            <li data-filter="*" class="filter-active">All Services</li>
+            <li data-filter=".filter-design">Accommodation</li>
+            <li data-filter=".filter-development">Dining</li>
+            <li data-filter=".filter-strategy">Bar</li>
+            <li data-filter=".filter-consulting">Events</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-5 isotope-container" data-aos="fade-up" data-aos-delay="300">
+
+            <div class="col-lg-12 portfolio-item isotope-item filter-design">
+              <article class="portfolio-card">
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <div class="project-visual">
+                      <img src="{% static 'saimo/img/acco.jpg' %}" 
+     alt="Enterprise Digital Platform" 
+     class="img-fluid" 
+     loading="lazy">
+                      <div class="project-overlay">
+                        <div class="overlay-content">
+                          <a href="saimo/img/k12.jpg" class="view-project glightbox" aria-label="View project image">
+                            <i class="bi bi-eye"></i>
+                          </a>
+                          <a href="#" class="project-link" aria-label="View project details">
+                            <i class="bi bi-arrow-up-right"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="project-details">
+                      <div class="project-header">
+                        <span class="project-category">Accommodation</span>
+                        <time class="project-year">2026</time>
+                      </div>
+                      <h3 class="project-title">Luxury Accommodation</h3>
+                      <p class="project-description">Relax in our spacious, elegantly furnished rooms and suites featuring modern
+amenities, breathtaking views, complimentary Wi-Fi, room service, and a peaceful
+environment for an unforgettable stay.</p>
+                      <div class="project-meta">
+                        <span class="client-name">Available 24/7</span>
+                        <div class="project-scope">
+                          <span class="scope-item">Luxury Rooms</span>
+                          <span class="scope-item">Room Service</span>
+                          <span class="scope-item">Free Wi-Fi</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-lg-12 portfolio-item isotope-item filter-development">
+              <article class="portfolio-card">
+                <div class="row g-4">
+                  <div class="col-md-6 order-md-2">
+                    <div class="project-visual">
+                      <img src="{% static 'saimo/img/food.jpeg' %}" 
+     alt="SaaS Product Suite" 
+     class="img-fluid" 
+     loading="lazy">
+                      <div class="project-overlay">
+                        <div class="overlay-content">
+                          <a href="assets/img/portfolio/portfolio-3.webp" class="view-project glightbox" aria-label="View project image">
+                            <i class="bi bi-eye"></i>
+                          </a>
+                          <a href="#" class="project-link" aria-label="View project details">
+                            <i class="bi bi-arrow-up-right"></i> 
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 order-md-1">
+                    <div class="project-details">
+                      <div class="project-header">
+                        <span class="project-category">Dining</span>
+                        <time class="project-year">2026</time>
+                      </div>
+                      <h3 class="project-title">Breakfast, Lunch & Dinner</h3>
+                      <p class="project-description">Enjoy delicious local and international cuisine prepared by experienced chefs.
+From hearty breakfasts to elegant dinners, every meal is crafted using fresh,
+high-quality ingredients.</p>
+                      <div class="project-meta">
+                        <span class="client-name">Open Daily</span>
+                        <div class="project-scope">
+                          <span class="scope-item">Breakfast</span>
+                          <span class="scope-item">Lunch</span>
+                          <span class="scope-item">Dinner</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-lg-12 portfolio-item isotope-item filter-strategy">
+              <article class="portfolio-card">
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <div class="project-visual">
+                      <img src="{% static 'saimo/img/bar.jpg' %}" 
+     alt="Brand Transformation" 
+     class="img-fluid" 
+     loading="lazy">
+                      <div class="project-overlay">
+                        <div class="overlay-content">
+                          <a href="assets/img/portfolio/portfolio-5.webp" class="view-project glightbox" aria-label="View project image">
+                            <i class="bi bi-eye"></i>
+                          </a>
+                          <a href="#" class="project-link" aria-label="View project details">
+                            <i class="bi bi-arrow-up-right"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="project-details">
+                      <div class="project-header">
+                        <span class="project-category">Bar</span>
+                        <time class="project-year">202</time>
+                      </div>
+                      <h3 class="project-title">Bar</h3>
+<p class="project-description">
+  Relax and unwind at our fully stocked bar, offering a wide selection of premium wines,
+  spirits, beers, cocktails, and refreshing beverages in a comfortable and welcoming atmosphere.
+</p>
+
+<div class="project-meta">
+  <span class="client-name">Refreshments & Relaxation</span>
+  <div class="project-scope">
+    <span class="scope-item">Cocktails</span>
+    <span class="scope-item">Premium Wines</span>
+    <span class="scope-item">Spirits & Beers</span>
+  </div>
+</div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-lg-12 portfolio-item isotope-item filter-consulting">
+              <article class="portfolio-card">
+                <div class="row g-4">
+                  <div class="col-md-6 order-md-2">
+                    <div class="project-visual">
+                      <img src="{% static 'saimo/img/conf.jpg' %}" 
+     alt="Digital Transformation" 
+     class="img-fluid" 
+     loading="lazy">
+                      <div class="project-overlay">
+                        <div class="overlay-content">
+                          <a href="assets/img/portfolio/portfolio-6.webp" class="view-project glightbox" aria-label="View project image">
+                            <i class="bi bi-eye"></i>
+                          </a>
+                          <a href="#" class="project-link" aria-label="View project details">
+                            <i class="bi bi-arrow-up-right"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 order-md-1">
+                    <div class="project-details">
+                      <div class="project-header">
+                        <span class="project-category">Events</span>
+                        <time class="project-year">2026</time>
+                      </div>
+                      <h3 class="project-title">Events & Conference Facilities</h3>
+                      <p class="project-description">Host successful conferences, weddings, seminars, meetings, and private events in
+our modern venues equipped with professional facilities and personalized event
+planning services.</p>
+                      <div class="project-meta">
+                        <span class="client-name">Bookings Available</span>
+                        <div class="project-scope">
+                          <span class="scope-item">Conferences</span>
+                          <span class="scope-item">Weddings</span>
+                          <span class="scope-item">Corporate Meetings</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- <div class="col-lg-12 portfolio-item isotope-item filter-design">
+              <article class="portfolio-card">
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <div class="project-visual">
+                     <img src="{% static 'saimo/img/r4.jpeg' %}" 
+     alt="Digital Transformation" 
+     class="img-fluid" 
+     loading="lazy">
+                      <div class="project-overlay">
+                        <div class="overlay-content">
+                          <a href="assets/img/portfolio/portfolio-2.webp" class="view-project glightbox" aria-label="View project image">
+                            <i class="bi bi-eye"></i>
+                          </a>
+                          <a href="#" class="project-link" aria-label="View project details">
+                            <i class="bi bi-arrow-up-right"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="project-details">
+                      <div class="project-header">
+                        <span class="project-category">Digital Design</span>
+                        <time class="project-year">2026</time>
+                      </div>
+                      <h3 class="project-title">E-commerce Experience</h3>
+                      <p class="project-description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint.</p>
+                      <div class="project-meta">
+                        <span class="client-name">Retail Brand</span>
+                        <div class="project-scope">
+                          <span class="scope-item">User Experience</span>
+                          <span class="scope-item">Interface Design</span>
+                          <span class="scope-item">Conversion Optimization</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-lg-12 portfolio-item isotope-item filter-development">
+              <article class="portfolio-card">
+                <div class="row g-4">
+                  <div class="col-md-6 order-md-2">
+                    <div class="project-visual">
+                      <img src="{% static 'saimo/img/portfolio/portfolio-6.webp' %}" 
+     alt="Digital Transformation" 
+     class="img-fluid" 
+     loading="lazy">
+                      <div class="project-overlay">
+                        <div class="overlay-content">
+                          <a href="assets/img/portfolio/portfolio-4.webp" class="view-project glightbox" aria-label="View project image">
+                            <i class="bi bi-eye"></i>
+                          </a>
+                          <a href="#" class="project-link" aria-label="View project details">
+                            <i class="bi bi-arrow-up-right"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 order-md-1">
+                    <div class="project-details">
+                      <div class="project-header">
+                        <span class="project-category">Development</span>
+                        <time class="project-year">2023</time>
+                      </div>
+                      <h3 class="project-title">Mobile Application</h3>
+                      <p class="project-description">Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute.</p>
+                      <div class="project-meta">
+                        <span class="client-name">Financial Services</span>
+                        <div class="project-scope">
+                          <span class="scope-item">iOS Development</span>
+                          <span class="scope-item">Android Development</span>
+                          <span class="scope-item">API Integration</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+              </article>
+            </div>
+
+          </div>
+          <!-- End Portfolio Items Container -->
+
+        </div>
+
+       
+
+<div class="portfolio-conclusion"
+     data-aos="zoom-in"
+     data-aos-delay="200"
+     style="background-image: url('{% static "saimo/img/s1.jpeg" %}');">
+
+    <div class="overlay"></div>
+
+    <div class="conclusion-content">        
+
+        <h2>Experience Comfort, Luxury & Nature</h2>
+
+        <p>
+            Escape to a world of elegance where luxury accommodation, exquisite dining,
+            breathtaking scenery, exciting recreational activities, and world-class
+            conference facilities come together to create unforgettable memories.
+        </p>
+
+        <div class="conclusion-actions">
+            <a href="#contact" class="primary-action">
+                Book Your Stay
+                <i class="bi bi-arrow-right"></i>
+            </a>
+
+            <a href="#service" class="secondary-action">
+                Explore Services
+            </a>
+        </div>
+    </div>
+
+</div><!-- /Portfolio Section -->
+
+    <!-- Team Section -->
+    <section id="team" class="team section">
+
+      <!-- Section Title -->
+      <!-- <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">Team</span>
+        <h2>Meet Our Team</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam</p>
+      </div><!-- End Section Title -->
+
+      <!-- <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5">
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member">
+              <div class="member-img">
+               <img src="{% static 'saimo/img/portfolio/portfolio-6.webp' %}" 
+     alt="Digital Transformation" 
+     class="img-fluid" 
+     loading="lazy">
+              </div>
+              <div class="member-info">
+                <h4>Sarah Johnson</h4>
+                <span>Chief Executive Officer</span>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas vestibulum tortor quam.</p>
+                <div class="social">
+                  <a href="#"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                  <a href="#"><i class="bi bi-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- End Team Member -->
+
+          <!-- <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="250">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="{% static 'saimo/img/person/person-m-12.webp' %}" 
+     class="img-fluid" 
+     alt="Michael Chen" 
+     loading="lazy">
+              </div>
+              <div class="member-info">
+                <h4>Michael Chen</h4>
+                <span>Chief Technology Officer</span>
+                <p>Mauris blandit aliquet elit eget tincidunt nibh pulvinar rutrum tellus ac blandit elit eget tincidunt mauris.</p>
+                <div class="social">
+                  <a href="#"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                  <a href="#"><i class="bi bi-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- End Team Member -->
+<!-- 
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="{% static 'saimo/img/person/person-f-3.webp' %}" 
+     class="img-fluid" 
+     alt="Emily Rodriguez" 
+     loading="lazy">
+              </div>
+              <div class="member-info">
+                <h4>Emily Rodriguez</h4>
+                <span>Creative Director</span>
+                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec velit neque auctor.</p>
+                <div class="social">
+                  <a href="#"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                  <a href="#"><i class="bi bi-dribbble"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="350">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="{% static 'assets/img/person/person-f-3.webp' %}" 
+     class="img-fluid" 
+     alt="Emily Rodriguez" 
+     loading="lazy">
+              </div>
+              <div class="member-info">
+                <h4>David Thompson</h4>
+                <span>Head of Operations</span>
+                <p>Curabitur arcu erat accumsan id imperdiet et porttitor at sem nulla facilisi mauris sit amet massa vitae tortor.</p>
+                <div class="social">
+                  <a href="#"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                  <a href="#"><i class="bi bi-facebook"></i></a>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- End Team Member -->
+<!-- 
+        </div>
+
+      </div>
+
+    </section> -->
+    <!-- /Team Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">What Our Guests Say</span>
+        <!-- <h2>What Our Guests Say</h2> -->
+        <p> Discover why visitors choose saimo hotel for unforgettable holidays, exceptional hospitality,
+    luxurious accommodation, delicious dining, and memorable events. Every stay is designed to
+    create lasting experiences.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="testimonial-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 4000
+              },
+              "slidesPerView": 1,
+              "spaceBetween": 30,
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              },
+              "breakpoints": {
+                "768": {
+                  "slidesPerView": 2
+                },
+                "1200": {
+                  "slidesPerView": 3
+                }
+              }
+            }
+          </script>
+
+          <div class="swiper-wrapper">
+
+            <!-- Testimonial Slide 1 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="200">
+                <div class="testimonial-header">
+                  <!-- <img src="assets/img/person/person-f-12.webp" alt="Client" class="img-fluid" loading="lazy"> -->
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <div class="testimonial-body">
+                  <p>Excellent hospitality, comfortable rooms, and delicious meals. Highly recommended!.</p>
+                </div>
+                <div class="testimonial-footer">
+                  <h5>xxxxxxxx</h5>
+                  <span>Director xxxx</span>
+                  <div class="quote-icon">
+                    <i class="bi bi-chat-quote-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Slide -->
+
+            <!-- Testimonial Slide 2 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="300">
+                <div class="testimonial-header">
+                  <img src="{% static 'saimo/img/person/person-f-3.webp' %}" 
+     class="img-fluid" 
+     alt="Emily Rodriguez" 
+     loading="lazy">
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <div class="testimonial-body">
+                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa.</p>
+                </div>
+                <div class="testimonial-footer">
+                  <h5>David Rodriguez</h5>
+                  <span>Software Engineer</span>
+                  <div class="quote-icon">
+                    <i class="bi bi-chat-quote-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Slide -->
+
+            <!-- Testimonial Slide 3 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="400">
+                <div class="testimonial-header">
+                  <img src="{% static 'saimo/img/person/person-f-3.webp' %}" 
+     class="img-fluid" 
+     alt="Emily Rodriguez" 
+     loading="lazy">
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <div class="testimonial-body">
+                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud.</p>
+                </div>
+                <div class="testimonial-footer">
+                  <h5>Amanda Wilson</h5>
+                  <span>Creative Director</span>
+                  <div class="quote-icon">
+                    <i class="bi bi-chat-quote-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Slide -->
+
+            <!-- Testimonial Slide 4 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="500">
+                <div class="testimonial-header">
+                 <img src="{% static 'saimo/img/person/person-f-3.webp' %}" 
+     class="img-fluid" 
+     alt="Emily Rodriguez" 
+     loading="lazy">
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <div class="testimonial-body">
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis.</p>
+                </div>
+                <div class="testimonial-footer">
+                  <h5>Ryan Thompson</h5>
+                  <span>Business Analyst</span>
+                  <div class="quote-icon">
+                    <i class="bi bi-chat-quote-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Slide -->
+
+            <!-- Testimonial Slide 5 -->
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="600">
+                <div class="testimonial-header">
+                  <img src="{% static 'saimo/img/person/person-f-3.webp' %}" 
+     class="img-fluid" 
+     alt="Emily Rodriguez" 
+     loading="lazy">
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <div class="testimonial-body">
+                  <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.</p>
+                </div>
+                <div class="testimonial-footer">
+                  <h5>Rachel Chen</h5>
+                  <span>Project Manager</span>
+                  <div class="quote-icon">
+                    <i class="bi bi-chat-quote-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Testimonial Slide -->
+
+          </div>
+
+          <div class="swiper-navigation">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    
+
+  </main>
+{% block footer %}
+ <footer id="footer" class="footer dark-background">
+
+  <div class="container footer-top">
+    <div class="row gy-4">
+
+      <!-- hotel About -->
+      <div class="col-lg-5 col-md-12 footer-about">
+        <a href="{% url 'home' %}" class="logo d-flex align-items-center">
+          <span class="sitename">saimo Hotel</span>
+        </a>
+
+        <p>
+          Experience luxury accommodation, exceptional dining, breathtaking scenery,
+          and unforgettable hospitality. Whether for leisure, business, or special
+          events, saimo hotel is your perfect destination.
+        </p>
+
+        <div class="social-links d-flex mt-4">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- hotel Services -->
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#">Luxury Accommodation</a></li>
+          <li><a href="#">Restaurant & Dining</a></li>
+          <li><a href="#">Conference Facilities</a></li>
+          <li><a href="#">Events & Weddings</a></li>
+          <li><a href="#">Recreational Activities</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-lg-3 col-md-12 footer-contact">
+        <h4>Contact Us</h4>
+
+        <p>saimo hotel</p>
+        <p>Baringo County</p>
+        <p>Kenya</p>
+
+        <p class="mt-4">
+          <strong>Phone:</strong>
+          <span>+254 7XX XXX XXX</span>
+        </p>
+
+        <p>
+          <strong>Email:</strong>
+          <span>info@saimohotel.com</span>
+        </p>
+
+        <p>
+          <strong>Reception:</strong>
+          <span>Open 24 Hours</span>
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="container copyright text-center mt-4">
+
+    <p>
+      © <span>Copyright</span>
+      <strong class="px-1 sitename">saimo hotel</strong>
+      <span>All Rights Reserved.</span>
+    </p>
+
+    <div class="credits">
+      Designed & Developed by
+      <strong>JKTech</strong>
+    </div>
+
+  </div>
+
+</footer>
+{% endblock footer %} {% endblock body %}
+
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+<script src="{% static 'saimo/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'saimo/vendor/php-email-form/validate.js' %}"></script>
+<script src="{% static 'saimo/vendor/aos/aos.js' %}"></script>
+<script src="{% static 'saimo/vendor/glightbox/js/glightbox.min.js' %}"></script>
+<script src="{% static 'saimo/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+<script src="{% static 'saimo/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static 'saimo/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'saimovendor/swiper/swiper-bundle.min.js' %}"></script>
+
+<!-- Main JS File -->
+<script src="{% static 'saimo/js/main.js' %}"></script>
+
+</body>
+
+</html>

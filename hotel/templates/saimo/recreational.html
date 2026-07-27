@@ -1,0 +1,360 @@
+{% extends "saimo/index.html" %}
+{% load static %}
+
+{% block current_page %}Students|{% endblock current_page %}
+{% block header_link %}
+
+{% endblock header_link %}
+
+{% block body %}
+{% block navigation %}
+{{ block.super }}
+{% endblock navigation %}
+
+ <main class="main">
+    <!-- HOME Section -->
+    
+<section class="home-section">
+  <div id="carouselExampleCaptions" class="carousel slide home-carousel" data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+        class="active" aria-current="true" aria-label="Slide 1"></button>
+
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <img src="{% static 'saimo/img/k1.jpg' %}" class="d-block w-100 home-img" alt="School Image">
+
+        <div class="carousel-caption home-caption">
+          <h1>Welcome to saimo Resort</h1>
+          <p>
+            Discover luxury accommodation, breathtaking views, and unforgettable hospitality in the heart of nature.
+          </p>
+          
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <img src="{% static 'saimo/img/k6.jpg' %}" class="d-block w-100 home-img" alt="Students">
+
+        <div class="carousel-caption home-caption">
+          <h1>Luxury Accommodation</h1>
+          <p>
+             Relax in our elegant rooms and suites designed to provide exceptional comfort and a memorable stay.
+          </p>
+            </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <img src="{% static 'saimo/img/k3.jpg' %}" class="d-block w-100 home-img" alt="School Life">
+
+        <div class="carousel-caption home-caption">
+          <h1>Dining, Events & Recreation</h1>
+          <p>
+               Enjoy exquisite dining, exciting recreational activities, and elegant venues for conferences, weddings, and celebrations.
+          </p>
+         
+        </div>
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button"
+      data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button"
+      data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </div>
+</section>
+
+<!-- Recreation Introduction -->
+<section class="recreation-section py-5">
+
+    <div class="container">
+
+        <div class="row justify-content-center text-center">
+
+            <div class="col-lg-8">
+
+                <span class="section-subtitle">
+                    RECREATION & LEISURE
+                </span>
+
+                <h2 class="section-title">
+                    Relax, Explore & Create Lasting Memories
+                </h2>
+
+                <p class="section-description">
+                    Escape the ordinary and experience a perfect blend of adventure,
+                    relaxation, and nature at saimo Resort. Whether you're seeking
+                    peaceful moments or exciting outdoor activities, we offer
+                    experiences for families, couples, corporate teams, and individual
+                    travelers.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+  <section class="activities-section py-5">
+
+<div class="container">
+
+<div class="text-center mb-5">
+
+<span class="section-subtitle">
+Our Activities
+</span>
+
+<h2 class="section-title">
+Enjoy Every Moment
+</h2>
+
+</div>
+
+<div class="row g-4">
+
+<!-- Swimming -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="activity-card">
+
+<img src="{% static 'saimo/img/k3.jpg' %}" class="img-fluid">
+
+<div class="activity-content">
+
+<h4>Swimming Pool</h4>
+
+<p>
+Enjoy a refreshing swim in our clean and relaxing swimming pool suitable for both adults and children.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Nature Walks -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="activity-card">
+
+<img src="{% static 'saimo/img/k5.jpg' %}" class="img-fluid">
+
+<div class="activity-content">
+
+<h4>Nature Walks</h4>
+
+<p>
+Explore beautiful landscapes while enjoying fresh air and breathtaking scenery.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Team Building -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="activity-card">
+
+<img src="{% static 'saimo/img/k10.jpg' %}" class="img-fluid">
+
+<div class="activity-content">
+
+<h4>Team Building</h4>
+
+<p>
+Professional outdoor activities designed for organizations, schools and groups.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Children's Play -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="activity-card">
+
+<img src="{% static 'saimo/img/k12.jpg' %}" class="img-fluid">
+
+<div class="activity-content">
+
+<h4>Children's Playground</h4>
+
+<p>
+A safe and enjoyable environment where children can play and have fun.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Photography -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="activity-card">
+
+<img src="{% static 'saimo/img/k4.jpg' %}" class="img-fluid">
+
+<div class="activity-content">
+
+<h4>Photography</h4>
+
+<p>
+Capture unforgettable memories with beautiful natural backdrops.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Bonfire -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="activity-card">
+
+<img src="{% static 'saimo/img/k4.jpg' %}" class="img-fluid">
+
+<div class="activity-content">
+
+<h4>Evening Bonfire</h4>
+
+<p>
+Relax around a warm bonfire while enjoying music and great conversations.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="why-recreation py-5">
+
+<div class="container">
+
+<div class="row text-center">
+
+<div class="col-lg-3 col-md-6">
+
+<div class="feature-box">
+
+<i class="bi bi-tree"></i>
+
+<h5>Natural Environment</h5>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="feature-box">
+
+<i class="bi bi-shield-check"></i>
+
+<h5>Safe & Secure</h5>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="feature-box">
+
+<i class="bi bi-people"></i>
+
+<h5>Family Friendly</h5>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="feature-box">
+
+<i class="bi bi-stars"></i>
+
+<h5>Memorable Experiences</h5>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+  <section class="recreation-cta">
+
+<div class="container text-center">
+
+<h2>
+Adventure Awaits at saimo Resort
+</h2>
+
+<p>
+Enjoy unforgettable recreational experiences with your family,
+friends, or colleagues in a peaceful natural environment.
+</p>
+
+<a href="{% url 'contact' %}" class="btn btn-theme">
+Book Your Stay
+</a>
+
+</div>
+
+</section>
+<!-- Footer Start -->
+        {% block footer %}
+        {{ block.super }}
+        {% endblock footer %}
+        <!-- Footer End -->
+{% endblock body %}
